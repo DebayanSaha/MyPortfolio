@@ -295,10 +295,14 @@
             <div class="circle"><i class="ri-arrow-right-up-line" onclick="window.open('https://github.com/DebayanSaha/ViteKickloadDevelopmentServer', '_blank')" style="cursor: pointer;"></i></div>
           </div>
           <div class="video-container">
-            <video class="video" muted loop playsinline preload="metadata">
-              <source src="public/video/kickload.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <iframe 
+              class="video" 
+              src="https://www.youtube.com/embed/fpy58eXQdOY?mute=1&loop=1&playlist=fpy58eXQdOY&controls=0&showinfo=0&rel=0" 
+              title="Kickload Project Video"
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+              allowfullscreen>
+            </iframe>
           </div>
           
         </div>
@@ -308,10 +312,14 @@
             <div class="circle"><i class="ri-arrow-right-up-line" onclick="window.open('https://github.com/DebayanSaha/SIH-24-Internal-Hackathon-Winner', '_blank')" style="cursor: pointer;"></i></div>
           </div>
           <div class="video-container">
-            <video class="video" muted loop playsinline preload="metadata">
-              <source src="public/video/mediaid.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <iframe 
+              class="video" 
+              src="https://www.youtube.com/embed/FtmTokc3q-0?mute=1&loop=1&playlist=FtmTokc3q-0&controls=0&showinfo=0&rel=0" 
+              title="MediaID Project Video"
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+              allowfullscreen>
+            </iframe>
           </div>
         </div>
 
@@ -321,10 +329,14 @@
             <div class="circle"><i class="ri-arrow-right-up-line" onclick="window.open('https://github.com/DebayanSaha/Netflix-Clone', '_blank')" style="cursor: pointer;"></i></div>
           </div>
           <div class="video-container">
-            <video class="video" muted loop playsinline preload="metadata">
-              <source src="public/video/netflix.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <iframe 
+              class="video" 
+              src="https://www.youtube.com/embed/BjfxVh0NauI?mute=1&loop=1&playlist=BjfxVh0NauI&controls=0&showinfo=0&rel=0" 
+              title="Netflix Project Video"
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+              allowfullscreen>
+            </iframe>
           </div>
         </div>
       </div>
@@ -584,18 +596,39 @@
     containers.forEach((container) => {
       const video = container.querySelector(".video");
 
-      // Pause video initially and set to first frame
-      video.pause();
-      video.currentTime = 0;
+      // Check if it's a YouTube iframe or regular video
+      if (video.tagName === 'IFRAME') {
+        // YouTube iframe handling
+        const youtubeUrl = video.src;
+        const baseUrl = youtubeUrl.split('?')[0];
+        
+        // Extract video ID from the URL
+        const videoId = youtubeUrl.match(/embed\/([^?]+)/)?.[1];
+        
+        container.addEventListener("mouseenter", () => {
+          // Add autoplay parameter to start playing
+          video.src = baseUrl + '?autoplay=1&mute=1&loop=1&playlist=' + videoId + '&controls=0&showinfo=0&rel=0';
+        });
 
-      container.addEventListener("mouseenter", () => {
-        video.play();
-      });
-
-      container.addEventListener("mouseleave", () => {
+        container.addEventListener("mouseleave", () => {
+          // Remove autoplay parameter to stop playing
+          video.src = baseUrl + '?mute=1&loop=1&playlist=' + videoId + '&controls=0&showinfo=0&rel=0';
+        });
+      } else {
+        // Regular video handling
+        // Pause video initially and set to first frame
         video.pause();
         video.currentTime = 0;
-      });
+
+        container.addEventListener("mouseenter", () => {
+          video.play();
+        });
+
+        container.addEventListener("mouseleave", () => {
+          video.pause();
+          video.currentTime = 0;
+        });
+      }
     });
 
     // Counter animation function
