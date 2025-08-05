@@ -40,8 +40,10 @@
           performance-driven development practices.
         </h4>
         <div id="buttons">
-          <button id="b1">LETS TALK <i class="ri-telegram-2-line"></i></button>
-          <button id="b2">RESUME <i class="ri-download-cloud-fill"></i></button>
+          <button id="b1" onclick="window.open('https://www.linkedin.com/in/debayansaha04/', '_blank')" aria-label="Connect on LinkedIn">LETS TALK <i class="ri-telegram-2-line"></i></button>
+          <a id="b2" href="public/DEBAYAN SAHA.pdf" download>
+            RESUME <i class="ri-download-cloud-fill"></i>
+          </a>
         </div>
       </div>
     </div>
@@ -49,7 +51,7 @@
     <div id="pageAboutMe">
       <div id="r1">
         <div id="box11">
-          <h1 id="l10">10+</h1>
+          <h1 id="l10">8+</h1>
           <h1 id="l10i">
             Hackathons <br />
             Participation
@@ -78,12 +80,12 @@
             Hi, I’m <strong>Debayan</strong> — an aspiring
             <strong>Computer Science Engineer .</strong> <br />Full Stack Web
             Developer specializing in modern, scalable web applications using
-            MERN stack. With a strong foundation in Java and Data Structures &
-            Algorithms, I build performant, maintainable systems from
+            <strong>MERN stack</strong>. With a strong foundation in <strong>Java</strong> and <strong>Data Structures &
+            Algorithms</strong>, I build performant, maintainable systems from
             scratch—combining efficient backend logic with responsive,
             user-centric frontends. Passionate about crafting clean
             architecture, solving complex problems, and delivering impactful
-            digital experiences. I thrive in fast-moving environments where
+            digital experiences. I thrive in <strong>fast-moving environments</strong> where
             innovation meets execution.
           </h3>
         </div>
@@ -672,7 +674,7 @@
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           // Animate counters when About Me page is visible
-          animateCounter(document.getElementById('l10'), 10);
+          animateCounter(document.getElementById('l10'), 8);
           animateCounter(document.getElementById('r10'), 5);
           animateCounter(document.getElementById('r11'), 6);
           animateCounter(document.getElementById('l11'), 1);
@@ -705,7 +707,7 @@
           // Trigger counter animation if scrolling to About page
           if (targetId === 'pageAboutMe') {
             setTimeout(() => {
-              animateCounter(document.getElementById('l10'), 10);
+              animateCounter(document.getElementById('l10'), 8);
               animateCounter(document.getElementById('r10'), 5);
               animateCounter(document.getElementById('r11'), 6);
               animateCounter(document.getElementById('l11'), 1);
