@@ -161,3 +161,61 @@ document.addEventListener('DOMContentLoaded', function() {
         }, index * 100);
     });
 });
+
+// Hamburger menu accessibility and toggle
+(function() {
+  const navToggle = document.getElementById('nav-toggle');
+  const centerNav = document.getElementById('center-nav');
+  if (!navToggle || !centerNav) return;
+
+  function openMenu() {
+    navToggle.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('nav-open');
+    // Focus first nav link
+    const firstLink = centerNav.querySelector('a');
+    if (firstLink) firstLink.focus();
+  }
+  function closeMenu() {
+    navToggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('nav-open');
+    navToggle.focus();
+  }
+  navToggle.addEventListener('click', function(e) {
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    if (expanded) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+  // Close on Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
+      closeMenu();
+    }
+    // Trap focus in menu
+    if (navToggle.getAttribute('aria-expanded') === 'true' && e.key === 'Tab') {
+      const focusable = centerNav.querySelectorAll('a');
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  });
+  // Close on outside click
+  document.addEventListener('mousedown', function(e) {
+    if (
+      navToggle.getAttribute('aria-expanded') === 'true' &&
+      !centerNav.contains(e.target) &&
+      e.target !== navToggle
+    ) {
+      closeMenu();
+    }
+  });
+})();

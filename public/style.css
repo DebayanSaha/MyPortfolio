@@ -1005,3 +1005,274 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(246, 159, 37, 0.3);
 }
+
+@media (max-width: 767px) {
+  #nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    margin-left: 10px;
+  }
+  .hamburger-bar {
+    width: 28px;
+    height: 3px;
+    background: #222;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(.4,2,.3,1);
+    display: block;
+  }
+  #nav-toggle[aria-expanded="true"] .hamburger-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  #nav-toggle[aria-expanded="true"] .hamburger-bar:nth-child(2) {
+    opacity: 0;
+  }
+  #nav-toggle[aria-expanded="true"] .hamburger-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  #center-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 80px 24px 24px 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    border-radius: 0;
+    z-index: 1000;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.35s cubic-bezier(.4,2,.3,1), opacity 0.2s;
+  }
+  body.nav-open #center-nav,
+  #nav-toggle[aria-expanded="true"] ~ #center-nav {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  #center-nav > a {
+    display: block;
+    width: 100%;
+    padding: 18px 0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #eee;
+    background: none;
+    color: #222;
+    text-align: left;
+    border-radius: 0;
+    margin: 0;
+  }
+  #center-nav > a:last-child {
+    border-bottom: none;
+  }
+  #center-nav > a:focus {
+    outline: 2px solid #f9a825;
+    background: #fffbe6;
+  }
+  #center-nav {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  }
+  #center-nav, #nav-right {
+    display: none;
+  }
+  #nav-toggle {
+    display: flex;
+  }
+  body.nav-open #center-nav {
+    display: flex;
+  }
+}
+@media (max-width: 600px) {
+  #pageAboutMe, #page2, #contactPage, .pagecontent, .maincontentyellow {
+    border-radius: 30px;
+    padding: 10px 0;
+  }
+  #pageAboutMe, #page2, #contactPage {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    padding: 10px 0;
+  }
+  #text0, #text01, #r1 {
+    margin: 10px 10px;
+    width: 95vw;
+    padding: 0;
+    position: static;
+  }
+  #text0>h1, #text1>h1, #title-left>h1, .heading>h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 10px 0;
+  }
+  #text0>h5, #text1>h5, #title-left>h5, .heading>h5 {
+    font-size: 1rem;
+    left: 0;
+    position: static;
+    margin: 0 auto 5px auto;
+    display: block;
+    text-align: center;
+  }
+  #text01, #text1>h4, #title-left>h4, .heading>h4 {
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 10px auto;
+  }
+  .maincontentyellow> #left, #r1 {
+    position: static;
+    width: 100vw;
+    height: auto;
+    min-height: 200px;
+    border-radius: 20px;
+    margin: 0 auto 10px auto;
+    box-shadow: none;
+  }
+  .carousel-container {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+    height: auto;
+  }
+  .box>.leftbox, .box>.rightbox {
+    position: static;
+    width: 100%;
+    margin: 0 auto 10px auto;
+    height: auto;
+  }
+  .box01, .box01>.midlebox, .box01>.lowerbox {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 10px auto;
+  }
+  .skill-bar, .skills-container {
+    min-width: 100px;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 5px;
+  }
+  .skill-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  .skill-name {
+    font-size: 0.9rem;
+  }
+  .container, .heading, .topleftContent, .bottomleftContent, .toprightContent, .bottomrightContent {
+    position: static;
+    width: 98vw;
+    min-width: 0;
+    margin: 0 auto 10px auto;
+    padding: 10px 2vw;
+    border-radius: 20px;
+    box-shadow: none;
+  }
+  .flexContent, .flexBox1, .flexBox2, .flexBox3 {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin: 0 auto 10px auto;
+    width: 100%;
+    min-width: 0;
+  }
+  .flexIcon {
+    font-size: 1.5rem;
+    margin: 0 auto;
+  }
+  .lowerContainer h1, .lowerContainer h4 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .video-container, .video {
+    width: 100vw;
+    height: auto;
+    min-height: 180px;
+    border-radius: 10px;
+    margin: 0 auto 10px auto;
+  }
+}
+@media (max-width: 480px) {
+  #pageAboutMe, #page2, #contactPage, .pagecontent, .maincontentyellow {
+    border-radius: 15px;
+    padding: 5px 0;
+  }
+  #text0, #text01, #r1 {
+    margin: 5px 2px;
+    width: 98vw;
+    padding: 0;
+  }
+  #text0>h1, #text1>h1, #title-left>h1, .heading>h1 {
+    font-size: 1.5rem;
+  }
+  .skill-bar, .skills-container {
+    min-width: 80px;
+    gap: 5px;
+    padding: 5px 2px;
+  }
+  .skill-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  .container, .heading, .topleftContent, .bottomleftContent, .toprightContent, .bottomrightContent {
+    padding: 5px 1vw;
+    border-radius: 10px;
+  }
+  .video-container, .video {
+    min-height: 120px;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 360px) {
+  #text0>h1, #text1>h1, #title-left>h1, .heading>h1 {
+    font-size: 1.1rem;
+  }
+  .skill-bar, .skills-container {
+    min-width: 60px;
+    gap: 2px;
+    padding: 2px 1px;
+  }
+  .skill-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #project, .projects {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100vw;
+    min-width: 0;
+    height: auto;
+    gap: 10px;
+    margin: 0 auto 10px auto;
+  }
+  .video-container, .video {
+    width: 100vw;
+    height: auto;
+    min-height: 180px;
+    border-radius: 10px;
+    margin: 0 auto 10px auto;
+  }
+}
