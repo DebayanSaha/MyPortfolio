@@ -66,25 +66,25 @@ const Page2 = () => {
 
         <div className='lg:mt-8 lg:h-45 h-30 w-full overflow-hidden'>
             <div ref={innerRef} className='h-full w-full flex flex-row no-wrap'>
-                <img src="/logo/MERN.png" alt="" />
-                <img src="/logo/js.png" alt="" />
-                <img src="/logo/java.png" alt="" />
-                <img src="/logo/tailwind.png" alt="" />
-                <img src="/logo/framer.png" alt="" />
-                <img src="/logo/gsap.png" alt="" />
-                <img src="/logo/html.png" alt="" />
-                <img src="/logo/css.png" alt="" />
-                <img src="/logo/Figma.png" alt="" />
+                <img src="/logo/MERN.webp" alt="" />
+                <img src="/logo/js.webp" alt="" />
+                <img src="/logo/java.webp" alt="" />
+                <img src="/logo/tailwind.webp" alt="" />
+                <img src="/logo/framer.webp" alt="" />
+                <img src="/logo/gsap.webp" alt="" />
+                <img src="/logo/html.webp" alt="" />
+                <img src="/logo/css.webp" alt="" />
+                <img src="/logo/Figma.webp" alt="" />
 
-                <img src="/logo/MERN.png" alt="" />
-                <img src="/logo/js.png" alt="" />
-                <img src="/logo/java.png" alt="" />
-                <img src="/logo/tailwind.png" alt="" />
-                <img src="/logo/framer.png" alt="" />
-                <img src="/logo/gsap.png" alt="" />
-                <img src="/logo/html.png" alt="" />
-                <img src="/logo/css.png" alt="" />
-                <img src="/logo/Figma.png" alt="" />
+                <img src="/logo/MERN.webp" alt="" />
+                <img src="/logo/js.webp" alt="" />
+                <img src="/logo/java.webp" alt="" />
+                <img src="/logo/tailwind.webp" alt="" />
+                <img src="/logo/framer.webp" alt="" />
+                <img src="/logo/gsap.webp" alt="" />
+                <img src="/logo/html.webp" alt="" />
+                <img src="/logo/css.webp" alt="" />
+                <img src="/logo/Figma.webp" alt="" />
             </div>
         </div>
     </div>

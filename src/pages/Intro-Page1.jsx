@@ -80,7 +80,7 @@ const Page1 = () => {
   return (
     <div onMouseMove={mouseMoving} ref={introRef} className='h-screen lg:p-4 px-1.5 py-2 bg-white relative'>
       <div id='page1-in'
-        className='shadow-xl shadow-zinc-500 relative py-10 lg:px-20 px-4 h-full w-full bg-cover lg:bg-[url(/background/bg1.png)] bg-[url(/background/bg3.png)] rounded-[30px]'>
+        className='shadow-xl shadow-zinc-500 relative py-10 lg:px-20 px-4 h-full w-full bg-cover lg:bg-[url(/background/bg1.webp)] bg-[url(/background/bg3.webp)] rounded-[30px]'>
         <TiltText abc={tiltRef} />
 
         <div className='absolute left-0 bottom-0 lg:py-15 p-4 lg:px-16 h-40 w-full flex items-end justify-between'>
@@ -92,8 +92,8 @@ const Page1 = () => {
           </div>
 
           <div ref={bannerRef} id='banner'>
-            <img className='lg:h-25 mb-5' src="/logo/10+.png" />
-            <img className='lg:h-25' src="/logo/5+.png" />
+            <img className='lg:h-25 mb-5' src="/logo/10+.webp" />
+            <img className='lg:h-25' src="/logo/5+.webp" />
           </div>
         </div>
       </div>

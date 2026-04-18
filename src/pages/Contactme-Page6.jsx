@@ -20,9 +20,9 @@ const Page6 = () => {
                     <h1 className='font-[B] lg:text-[1vw] leading-8 text-[#d3d3d3]'> Kolkata, West Bengal, India</h1>
                 </div>
                 <div className='head absolute lg:right-10 right-2 lg:bottom-40 bottom-35 lg:h-10 h-8 w-[20%] flex flex-row gap-6 '>
-                    <img onClick={()=>window.open('https://www.linkedin.com/in/debayansaha04/', '_blank')} className='hover:h-11 transition-transform duration-400 cursor-pointer' src="/logo/4.png" alt="" />
-                    <img onClick={()=>window.open('https://github.com/DebayanSaha', '_blank')} className='hover:h-11 transition-transform duration-400 cursor-pointer' src="/logo/3.png" alt="" />
-                    <img onClick={()=>window.open('https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJqXPSJDGDfWpRvBvgVXfkNGPzDgMLcqRsfnVhcgPfWCGCsjppsdVpxrlzMnfkhrxbMNGxq', '_blank')} className='hover:h-11 transition-transform duration-400 cursor-pointer' src="/logo/2.png" alt="" />
+                    <img onClick={()=>window.open('https://www.linkedin.com/in/debayansaha04/', '_blank')} className='hover:h-11 transition-transform duration-400 cursor-pointer' src="/logo/4.webp" alt="" />
+                    <img onClick={()=>window.open('https://github.com/DebayanSaha', '_blank')} className='hover:h-11 transition-transform duration-400 cursor-pointer' src="/logo/3.webp" alt="" />
+                    <img onClick={()=>window.open('https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJqXPSJDGDfWpRvBvgVXfkNGPzDgMLcqRsfnVhcgPfWCGCsjppsdVpxrlzMnfkhrxbMNGxq', '_blank')} className='hover:h-11 transition-transform duration-400 cursor-pointer' src="/logo/2.webp" alt="" />
                 </div>
             </div>
         </div>

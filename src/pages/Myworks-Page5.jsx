@@ -89,7 +89,7 @@ const Page4 = () => {
                     <motion.div key={index}
                     initial={{ opacity: 0 , x:100 , scale: 0.9 }} animate={{ opacity: 1 , x: 0, scale: 1 }} exit={{ opacity: 0 , x:-100, scale: 0.9 }}
                     transition={{ duration: 1, ease: "easeInOut" }} className='relative h-full w-full flex items-center justify-center'>
-                        <img className='absolute lg:h-[93vh] z-10' src="/background/astroSmall.png" alt="" />
+                        <img className='absolute lg:h-[93vh] z-10' src="/background/astroSmall.webp" alt="" />
                         <h1 className='absolute font-[E] lg:bottom-25 bottom-10 leading-0 lg:text-[14vw] text-[15vw] uppercase z-11'>{project[index].name}</h1>
                         <div className='absolute lg:top-17 top-8 lg:h-[27vw] h-[39vw] w-[37vw] lg:w-[27vw] rounded-full overflow-hidden'>
                             <video className='h-full w-full object-cover' autoPlay muted loop src={project[index].path}></video>

@@ -44,9 +44,9 @@ const Page3 = () => {
     <>
     <div ref={page3Ref} id='about' className='h-screen  w-full lg:p-4 p-2 bg-white lg:mt-10'>
             <div className='relative lg:h-[45vw] h-full overflow-hidden'>
-                <video autoPlay loop muted className='absolute  w-full h-full object-cover rounded-[30px]' src="/vids/earthBG.mov"></video>
+                <video autoPlay loop muted className='absolute  w-full h-full object-cover rounded-[30px]' src="/vids/earthBG.mp4"></video>
                 <div className='absolute lg:h-[45vw] right-0 bottom-0'>
-                    {/* <img ref={img1Ref} className='h-full rounded-[30px]' src="/background/astro3.png" alt="" /> */}
+                    {/* <img ref={img1Ref} className='h-full rounded-[30px]' src="/background/astro3.webp" alt="" /> */}
                     {/* <video autoPlay loop muted className='z-9999' src="vids/MOON.mov"></video> */}
                 </div>
                 <div className='relative h-full lg:w-1/2 lg:p-4 p-2 flex flex-col lg:justify-center justify-start lg:mt-0 mt-20'>
